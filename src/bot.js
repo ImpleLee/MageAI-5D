@@ -1,184 +1,5 @@
-//Mage-5DAI
-
-var Chess = require('5d-chess-js');
-var chess = new Chess();
-chess.reset("turn_zero");
-
-var puzzle = 2
-//Los v Tesseract Mate in 6
-if (puzzle == 1) {
-
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[3qk*b1r*/2p*p*1p*1p*/bp*n1p*1p*n/p*N6/P*3N2P*/1P*B1P*Q2/2P*2P*P*R*/R*3K*B2:0:1:w]';
-
-    chess.import(str1)
-    /*
-    chess.move('Nf6')
-    chess.submit()
-    chess.move('Ke7')
-    chess.submit()
-    chess.move('Nd5')
-    chess.submit()
-    chess.move('Ke8')
-    chess.submit()
-    chess.move('Nbxc7')
-    chess.submit()
-    chess.move('Qxc7')
-    chess.submit()
-    */
-}
-// Mage v Nageek - Mate in 2
-else if (puzzle == 2) {
-    var str2 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*n2k*b1r*/p*b1p*qp*p*p*/4p*n2/1p*2N3/8/4P*N2/P*P*1P*1P*P*P*/3QK*B2:0:1:w]';
-
-    chess.import(str2)
-    chess.move('Bxb5')
-    chess.submit()
-    chess.move('Bxf3')
-    chess.submit()
-    chess.move('Qxf3')
-    chess.submit()
-    chess.move('Qc5')
-    chess.submit()
-
-}
-//RyanFour - Mate in 5
-else if (puzzle == 3) {
-    var str3 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*nb1k*bnr*/p*p*1p*2p*p*/4p*3/4qp*B1/Q2N4/2P*5/P*P*2P*P*P*P*/R*N2K*B1R*:0:1:w]';
-    chess.import(str3)
-}
-//Mage - Mate in 3 
-else if (puzzle == 4) {
-    var str4 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*nb1k*b1r*/p*2p*p*p*p*p*/7n/8/2p*P*2B1/2P*1P*N2/P*P*3P*P*P*/R*NBQK*2R*:0:1:w]';
-    chess.import(str4)
-
-    chess.move('Bh5')
-    chess.submit()
-    chess.move('d5')
-    chess.submit()
-}
-//Mage v Samet Knight
-else if (puzzle == 5) {
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*n2k*2r*/p*b1p*1p*bp*/1pq1pnp1/2p5/2P5/BPNBPN1P/P*1QP*1P*P*1/R*3K*2R*:0:1:w]';
-    chess.import(str1);
-
-    chess.move('Bb2')
-    chess.submit()
-    chess.move('Na6')
-    chess.submit()
-}
-//RyanFour Mate in 5?
-else if (puzzle == 6) {
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*nbqk*bnr*/p*p*2p*p*p*p*/2p5/8/5P2/3PPN2/P*P*BP*2P*P*/R*NBQK*2R*:0:1:w]';
-    chess.import(str1);
-    chess.move('Bb3')
-    chess.submit()
-    chess.move('Nf6')
-    chess.submit()
-    chess.move('Bc4')
-    chess.submit()
-    chess.move('Nd5')
-    chess.submit()
-    chess.move('Ng1')
-    chess.submit()
-}
-//Mage/Los Mate in 5
-else if (puzzle == 7) {
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*nb2k1r*/1q2p*p*bp*/p4n2/1p6/1P1P1B2/PB2P1N1/3N1P*P*P*/R*2QK*2R*:0:1:w]';
-    chess.import(str1);
-    chess.move('Bc2')
-    chess.submit()
-    chess.move('Qc6')
-    chess.submit()
-    chess.move('Bb3')
-    chess.submit()
-    chess.move('Qb7')
-    chess.submit()
-}
-//Mage Mate in 6
-else if (puzzle == 8) {
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[brkq2r1/p*1p*p*b2p*/1pn4p/8/3N4/1P2PNP1/P*1P*P*1P*Q1/R*3K*B1R*:0:1:w]';
-    chess.import(str1);
-}
-//Ryan Four Mate in 5
-else if (puzzle == 9) {
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[r*1bnk*b1r*/p*p*3p*1p*/2p1pnp1/1N6/2B5/3qPN2/P*P*1P*1P*P*P*/R*1B1K*2R*:0:1:w]';
-    chess.import(str1);
-}
-{
-    //f7 sac
-    var str1 =
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[r*nbq1bnr*/p*p*p*p*p*k*p*p*/8/8/8/8/P*P*P*P*P*P*P*P*/R*NBQK*BNR*:0:1:w]';
-
-    var str2 =
-        '[Size "6x6"]\n' +
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[r*bqk*br*/p*p*p*p*p*p*/6/6/P*P*P*P*P*P*/R*BQK*BR*:0:1:w]';
-
-    //Very Small Open
-    var str3 =
-        '[Size "4x4"]\n' +
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[nbr*k*/3p*/P*3/K*R*BN:0:1:w]';
-    //Very Small
-    var str4 =
-        '[Size "4x4"]\n' +
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[nbr*k*/p*p*p*p*/P*P*P*P*/K*R*BN:0:1:w]';
-
-    //Small - Open
-    var str5 =
-        '[Size "5x5"]\n' +
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[p*r*nbk*/3p*p*/5/P*P*3/K*BNR*P*:0:1:w]';
-
-    var str6 =
-        '[Size "6x6"]\n' +
-        '[Board "Custom"]\n' +
-        '[Mode "5D"]\n' +
-        '[Promotions "Q"]\n' +
-        '[nbqk*bn/p*p*p*p*p*p*/6/6/P*P*P*P*P*P*/NBQK*BN:0:1:w]';
-
-    //chess.import(str6);
-}
-
+(chess0) => {
+var chess = chess0.copy();
 // Piece material values.
 var matValues = [
     1000,  //pawn   0
@@ -213,7 +34,7 @@ console.log("\nnegaMax\n");
 
 var isTurnZero = chess.rawBoard.length > 0 ? (chess.rawBoard[0].length > 0 ? chess.rawBoard[0][0] === null : false) : false;
 console.log(chess.print())
-var initDepth = 3;
+var initDepth = 5;
 var mateOnly = false;
 
 var evalSteps = 0;
@@ -269,6 +90,11 @@ else{
         }
     }
 }
+return {
+    action: chess0.actionNumber,
+    player: chess0.player,
+    moves: [evaluation.evalMove[evaluation.evalMove.length - 1]]
+};
 
 /*
  * Evaluate the static position. Currently includes: material, movement, vulnerable squares, king's pieces. 
@@ -828,4 +654,5 @@ function addKiller(killerMoves, newKiller) {
 // Checks if two moves are equal (for a given turn and timeline).
 function equalsMove(move) {
     return move[0][2] === this[0][2] && move[0][3] === this[0][3] && move[1][2] === this[1][2] && move[1][3] === this[1][3];
+}
 }
